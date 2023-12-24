@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Форма регистрации</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style/styleAppend.css">
+</head>
+
+<body>
+    <header>
+    </header>
+    
+    <main>
+        <div class="feedbackForm">
+            <form action="handler.php">
+                <p><center><h2>Форма обратной связи</h2></center></p>
+				<p><input type = "text" placeholder = "ФИО" name = "fill_name" required></p>
+				<p><input type = "text" placeholder = "E-mail" name = "email" required></p>
+				<p><center>Откуда узнали о нас:</center></p>
+				<label>
+					<input type="radio" name="source" value="Интернет"> Интернет
+					<input type="radio" name="source" value="Друзья"> Друзья
+				</label>
+				<p><center><select name = "type">
+					<option value = "Жалоба">Жалоба</option>
+					<option value = "Предложение">Предложение</option>
+				</select></center></p>
+				<p><textarea placeholder="Текст сообщения" name="message" required></textarea></p>
+				<p><center><input type="file" name="attachment"></center></p>
+				<p><label><input type="checkbox" name="consent" required> Даю согласие на обработку персональных данных</label></p>
+				<p><center><button type="submit">Отправить</button></label></p>
+				<p> <button onclick="redirectToOtherPage()">Вернуться назад</button></p>
+			</form>
+        </div>
+		 <script>
+        function redirectToOtherPage() {
+            window.location.href = "site.html";
+        }
+    </script>
+    </main>
+    
+    <footer>
+    </footer>
+</body>
+</html>
